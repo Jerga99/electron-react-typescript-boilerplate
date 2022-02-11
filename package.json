@@ -5,7 +5,7 @@
   "main": "main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "concurrently \"webpack --config webpack.common.js --watch && start\" \"npm run start\"",
+    "watch": "concurrently \"webpack --config webpack.common.js --watch\" \"npm run start\"",
     "start": "electron ."
   },
   "keywords": [],
