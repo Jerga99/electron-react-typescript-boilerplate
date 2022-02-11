@@ -11,7 +11,6 @@ function createWindow() {
     backgroundColor: "white",
     webPreferences: {
       nodeIntegration: false,
-      worldSafeExecuteJavaScript: true,
       contextIsolation: true,
       preload: path.join(__dirname, 'preload.js')
     }
@@ -27,7 +26,7 @@ if (isDev) {
 }
 
 ipcMain.on('notify', (_, message) => {
-  new ENotification({title: 'Notifiation', body: message}).show();
+  new ENotification({title: 'Notification', body: message}).show();
 })
 
 app.whenReady().then(createWindow)
